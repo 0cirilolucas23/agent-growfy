@@ -73,7 +73,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <header> {/* Seu header original */}
-        <Image src="/assets/logo.png" alt="Logo esports" className={styles.headerLogo} width={240} height={40} priority />
+        <Image src="/assets/logo.png" alt="Logo growfy" className={styles.headerLogo} width={159} height={267} priority />
       </header>
 
       <main className={styles.main}>

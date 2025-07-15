@@ -7,12 +7,35 @@
     box-sizing: border-box;
 }
 
+:root {
+  --ColorNeutral-n50: #FFFFFFFF;
+  --ColorNeutral-100: #F2EEFFFF;
+  --ColorPrimary-200: #CCBBFFFF;
+  --ColorPrimary-300: #A788FFFF;
+  --ColorPrimary-400: #774FECFF;
+  --ColorPrimary-500: #5934C3FF;
+  --ColorPrimary-600: #3F1F9AFF;
+  --ColorPrimary-700: #290F71FF;
+  --ColorPrimary-800: #160549FF;
+  --ColorNeutral-n200: #E5E4E8FF;
+  --ColorNeutral-n300: #C6C2CBFF;
+  --ColorNeutral-n400: #A7A3AEFF;
+  --ColorNeutral-n500: #6F6A77FF;
+  --ColorNeutral-n600: #595460FF;
+  --ColorNeutral-n700: #433F49FF;
+  --ColorNeutral-n800: #19171CFF;
+  --ColorActions-error: #C11B16FF;
+  --ColorActions-alert: #E9950FFF;
+  --ColorActions-new: #56F5DEFF;
+  --ColorActions-sucess: #00D861FF;
+}
+
 body {
     background-image: url("/assets/bg.jpg"); /* Verifique o caminho da imagem depois */
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: top center;
-    background-color: #121214;
+    background-color: #19171c;
     color: #fff;
 }
 
