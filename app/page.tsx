@@ -1,7 +1,7 @@
 // app/page.tsx
 'use client'; // Essencial para componentes que usam hooks (useState) e interatividade do cliente
 
-import { useState, useEffect } from 'react'; // Importamos useState e useEffect
+import { useState } from 'react'; // Importamos useState e useEffect
 import Image from "next/image"; // Para usar o componente Image do Next.js
 import styles from "./page.module.css"; // Importamos seus estilos CSS Modules
 
@@ -61,10 +61,11 @@ export default function Home() {
       // Converte a resposta da IA de Markdown para HTML antes de exibir
       setResponse(markdownToHTML(data.response));
 
-    } catch (err: any) {
-      console.error('Erro ao obter resposta da IA:', err);
-      setError(err.message || 'Desculpe, não consegui gerar uma resposta no momento. Tente novamente mais tarde.');
-    } finally {
+   } catch (err: unknown) {
+  console.error('Erro ao obter resposta da IA:', err); // Converte para string se não for um Error para exibir
+  const errorMessage = err instanceof Error ? err.message : String(err);
+  setError(errorMessage || 'Desculpe, não consegui gerar uma resposta no momento. Tente novamente mais tarde.');
+} finally {
       setLoading(false); // Desativa o estado de carregamento
     }
   };
