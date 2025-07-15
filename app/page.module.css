@@ -1,0 +1,152 @@
+/* app/page.module.css */
+
+/* Mantém os estilos do template Next.js se eles forem relevantes */
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    /* background-color: #f0f0f0; -- Removido pois o body já tem background */
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 36rem; /* 36rem = 576px (conforme seu HTML original) */
+    margin: 3rem auto; /* Ajuste para o Next.js, 'auto' centraliza */
+    padding: 2rem;
+    background-color: #ffffff; /* Este será sobrescrito pelo .section>div */
+    border-radius: 8px; /* Este será sobrescrito pelo .section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Exemplo, pode ser removido */
+}
+
+.headerLogo { /* Nova classe para a logo no header */
+    width: 15rem;
+}
+
+.sectionContainer { /* Nova classe para a div que envolve o conteúdo da seção */
+    background-image: linear-gradient(90deg, #9572fc 0%, #43e7ad 50%, #e2d45c 100%);
+    border-radius: 0.625rem;
+    padding-top: 4px;
+    opacity: 0; /* Para a animação */
+    transform: translateY(2rem); /* Para a animação */
+    animation-name: appear;
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+}
+
+.sectionContent { /* Nova classe para o div interno da seção */
+    padding: 2rem;
+    padding-top: 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #2a2634;
+}
+
+.sectionTitle { /* Nova classe para h2 */
+    letter-spacing: -0.47px;
+}
+
+.sectionParagraph { /* Nova classe para p */
+    letter-spacing: -0.18px;
+    color: #a1a1aa;
+}
+
+/* Animação */
+@keyframes appear {
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Formulário */
+.form { /* Nova classe para o formulário */
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin: 1.25rem 0;
+}
+
+.inputField, /* Nova classe para input */
+.selectField { /* Nova classe para select */
+    all: unset;
+    border: 2px solid #9147ff;
+    border-radius: 0.5rem;
+    padding: 0.675rem;
+    font-size: 0.875rem;
+    background-color: #00000066;
+}
+
+.inputField {
+    flex: 1;
+}
+
+.askButton { /* Nova classe para o botão */
+    width: 100%;
+    border: 0;
+    background-image: linear-gradient(156deg, #9572fc 0%, #43e7ad 50%, #e2d45c 100%);
+    padding: 0.675rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.12px;
+    transition: all 0.3s;
+}
+
+.askButton:hover:not(:disabled) { /* Ajuste do hover para React */
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+.askButton:disabled {
+    transition: none;
+    transform: initial;
+    box-shadow: initial;
+    cursor: not-allowed;
+    color: black;
+}
+
+/* Resposta da AI */
+.aiResponse { /* Nova classe para #aiResponse */
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    border-left: 4px solid #43e7ad;
+}
+
+.aiResponse p {
+    color: #fff;
+}
+
+.aiResponse ul {
+    padding-left: 1.5rem;
+    opacity: 0.8;
+}
+
+.loading {
+    animation: pulse 1s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Outros estilos do template Next.js (se você mantiver) */
+.ctas { /* Exemplo de classe existente do template Next.js */
+  /* Seus estilos aqui */
+}
+.footer { /* Exemplo de classe existente do template Next.js */
+  /* Seus estilos aqui */
+}

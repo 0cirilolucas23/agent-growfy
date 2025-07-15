@@ -1,0 +1,24 @@
+/* app/global.css */
+
+/* Reset e fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/assets/bg.jpg"); /* Verifique o caminho da imagem depois */
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    background-color: #121214;
+    color: #fff;
+}
+
+body * {
+    font-family: "Inter", sans-serif; /* Certifique-se de que esta fonte está sendo carregada (via Google Fonts ou similar) */
+    line-height: 160%;
+}
+
+/* Outros estilos globais que você possa ter */
